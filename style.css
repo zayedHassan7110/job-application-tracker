@@ -293,3 +293,24 @@ body {
     background: #eef2ff;
     border: 1px solid #e0e7ff;
 }
+
+
+/* Responsive */
+@media (max-width: 720px) {
+    .title {
+        font-size: 22px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs {
+        padding: 14px;
+    }
+
+    .jobs-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
