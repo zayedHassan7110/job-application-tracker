@@ -66,3 +66,59 @@ body {
 .stat-red {
     color: #dc2626;
 }
+
+/* Jobs section */
+.jobs {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    padding: 16px;
+}
+
+.jobs-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.jobs-count {
+    color: #6b7280;
+    font-weight: 700;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+}
+
+.tab {
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #111827;
+}
+
+.tab.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.content-area {
+    padding-top: 14px;
+}
