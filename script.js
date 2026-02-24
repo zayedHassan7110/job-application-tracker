@@ -96,6 +96,7 @@ let activeTab = "all";
 // Elements
 const contentArea = document.getElementById("contentArea");
 const tabCountEl = document.getElementById("tabCount");
+const jobsCountText = document.getElementById("jobsCountText");
 
 const totalCountEl = document.getElementById("totalCount");
 const interviewCountEl = document.getElementById("interviewCount");
@@ -209,7 +210,11 @@ function render() {
         }
     }
 
-    tabCountEl.innerText = visibleCount;
+    if (activeTab === "all") {
+        jobsCountText.innerText = total + " jobs";
+    } else {
+        jobsCountText.innerText = visibleCount + " of " + total + " jobs";
+    }
 
     if (visibleCount === 0) {
         contentArea.innerHTML = emptyStateHTML();
