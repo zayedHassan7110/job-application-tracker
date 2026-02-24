@@ -1,6 +1,4 @@
-// =======================
 // Data (8 Jobs)
-// =======================
 let data = [
     {
         id: "j1",
@@ -222,3 +220,15 @@ function render() {
 
 render()
 
+// Tabs
+for (let t = 0; t < tabs.length; t++) {
+    tabs[t].addEventListener("click", function () {
+        for (let k = 0; k < tabs.length; k++) {
+            tabs[k].classList.remove("active");
+        }
+        this.classList.add("active");
+
+        activeTab = this.getAttribute("data-tab");
+        render();
+    });
+}
