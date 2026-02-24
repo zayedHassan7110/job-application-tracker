@@ -218,7 +218,6 @@ function render() {
     }
 }
 
-render()
 
 // Tabs
 for (let t = 0; t < tabs.length; t++) {
@@ -232,3 +231,48 @@ for (let t = 0; t < tabs.length; t++) {
         render();
     });
 }
+
+
+// Event Delegation buttons
+
+contentArea.addEventListener("click", function (e) {
+    const button = e.target.closest("button");
+    if (!button) return;
+
+    const action = button.getAttribute("data-action");
+    if (!action) return;
+
+    const card = button.closest(".card");
+    if (!card) return;
+
+    const id = card.getAttribute("data-id");
+
+    let index = -1;
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].id === id) {
+            index = i;
+            break;
+        }
+    }
+    if (index === -1) return;
+
+    if (action === "delete") {
+        data.splice(index, 1);
+        render();
+        return;
+    }
+
+    if (action === "interview") {
+        data[index].status = "Interview";
+        render();
+        return;
+    }
+
+    if (action === "rejected") {
+        data[index].status = "Rejected";
+        render();
+        return;
+    }
+});
+
+render()
