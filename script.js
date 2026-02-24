@@ -158,7 +158,9 @@ function cardHTML(job) {
         "</span>" +
         "</div>" +
         "</div>" +
-        "<button class='icon-btn' data-action='delete' title='Delete job' aria-label='Delete job'>🗑️</button>" +
+        "<button class='icon-btn' data-action='delete' title='Delete job' aria-label='Delete job'>" +
+        "<img src='assets/dustbin.png' alt='Delete' class='delete-icon' />" +
+        "</button>" +
         "</div>" +
         "<p class='desc'>" +
         job.description +
