@@ -10,6 +10,45 @@
 
 <body>
 
+    <div class="container">
+
+        <header class="header">
+            <h1 class="title">Job Application Tracker</h1>
+        </header>
+
+        <section class="dashboard">
+            <div class="stat">
+                <div class="stat-label">Total</div>
+                <div id="totalCount" class="stat-value">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Interview</div>
+                <div id="interviewCount" class="stat-value stat-green">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Rejected</div>
+                <div id="rejectedCount" class="stat-value stat-red">0</div>
+            </div>
+        </section>
+
+        <section class="jobs">
+            <div class="jobs-head">
+                <h2 class="section-title">Available Jobs</h2>
+                <div class="jobs-count">
+                    <span id="tabCount">0</span> jobs
+                </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Job Tabs">
+                <button class="tab active" data-tab="all" role="tab">All</button>
+                <button class="tab" data-tab="interview" role="tab">Interview</button>
+                <button class="tab" data-tab="rejected" role="tab">Rejected</button>
+            </div>
+
+            <div id="contentArea" class="content-area">
+            </div>
+        </section>
+    </div>
     <script src="./script.js">
 
     </script>
